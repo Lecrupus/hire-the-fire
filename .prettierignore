@@ -1,0 +1,3 @@
+# Third-party skill files are kept byte-for-byte as published.
+.claude/skills/
+vendor/
