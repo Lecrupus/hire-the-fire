@@ -1,0 +1,12 @@
+# Upload only what the client build needs. Everything else (server code, .env, local data) stays out.
+/*
+!/package.json
+!/package-lock.json
+!/vercel.json
+!/client
+!/server
+/server/*
+!/server/package.json
+/client/node_modules
+/client/dist
+/client/.vite

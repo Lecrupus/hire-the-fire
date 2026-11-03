@@ -11,3 +11,6 @@ vendor/
 .impeccable/review/
 .DS_Store
 server/.local-db/
+
+.vercel
+.vite/
