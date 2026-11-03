@@ -1,0 +1,62 @@
+.filter {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+}
+
+.filter select {
+  height: 36px;
+  padding: 0 var(--s-2);
+  border: 1px solid #c9cdd4;
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.title {
+  font-weight: 650;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.code {
+  font-family: var(--font-data);
+  font-size: 10px;
+  color: var(--red-700);
+}
+
+.state {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: var(--t-xs);
+  font-weight: 650;
+}
+
+.open {
+  background: var(--green-100);
+  color: var(--green-800);
+}
+
+.draft {
+  border: 1px dashed #b5bac3;
+  color: var(--ink-3);
+}
+
+.closed {
+  background: var(--line-2);
+  color: var(--ink-2);
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}

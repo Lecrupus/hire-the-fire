@@ -1,0 +1,75 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font-family:Archivo,sans-serif;background:#F5F6F8;color:#1A1D24;display:grid;grid-template-columns:248px 1fr}
+.rail{background:#B3121F;color:#fff;padding:22px 18px;display:flex;flex-direction:column;gap:26px}
+.brand{font-weight:800;font-size:20px;letter-spacing:-.01em}
+.brand small{display:block;font:500 10px 'Martian Mono';letter-spacing:.08em;opacity:.75;margin-top:4px}
+nav a{display:block;color:#fff;text-decoration:none;font-weight:500;font-size:14px;padding:9px 10px;border-radius:4px;opacity:.85}
+nav a.on{background:#8E0E18;opacity:1;font-weight:700}
+.jobs h4{font:500 10px 'Martian Mono';letter-spacing:.1em;opacity:.7;margin-bottom:8px}
+.job{padding:9px 10px;border-radius:4px;font-size:13px;line-height:1.3}
+.job b{display:block;font-weight:600}
+.job span{font:400 10px 'Martian Mono';opacity:.75}
+.job.on{background:#F5B700;color:#1A1D24}
+main{padding:24px 32px;display:flex;flex-direction:column;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:flex-end}
+.top h1{font-size:28px;font-weight:800;letter-spacing:-.02em}
+.top p{font-size:13px;color:#555b66;margin-top:4px}
+.id{font:500 11px 'Martian Mono';color:#B3121F;letter-spacing:.06em}
+.btn{background:#1A1D24;color:#fff;border:0;font:600 13px Archivo;padding:10px 16px;border-radius:4px}
+.tabs{display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border:1px solid #DDE0E5;border-radius:6px}
+.tab{padding:12px 14px;border-right:1px solid #DDE0E5;font-size:12px;color:#555b66}
+.tab:last-child{border-right:0}
+.tab strong{display:block;font-size:22px;color:#1A1D24;font-weight:700;margin-top:2px}
+.tab i{display:block;height:4px;background:#F5B700;margin-top:8px;border-radius:2px}
+.tab.on{box-shadow:inset 0 -3px 0 #B3121F;color:#B3121F}
+.filters{display:flex;gap:8px;align-items:center}
+.filters input,.filters select{border:1px solid #CDD1D8;background:#fff;border-radius:4px;padding:8px 10px;font:400 13px Archivo;color:#1A1D24}
+.filters input{width:280px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #DDE0E5;border-radius:6px;font-size:13px}
+th{text-align:left;font:500 10px 'Martian Mono';letter-spacing:.08em;color:#6b717c;padding:10px 14px;border-bottom:1px solid #DDE0E5;background:#FAFAFB}
+td{padding:11px 14px;border-bottom:1px solid #EEF0F3;vertical-align:middle}
+.np b{display:block;font-weight:600;font-size:14px}
+.np span{color:#6b717c;font-size:12px}
+.match{font:500 12px 'Martian Mono'}
+.st{display:inline-block;font-weight:600;font-size:12px;padding:3px 8px;border-radius:3px;background:#EEF0F3}
+.st.sh{background:#FFF1C7;color:#6A4D00}.st.iv{background:#E7E4F6;color:#3F3580}.st.hi{background:#DDF1E3;color:#1D6B3A}.st.rj{background:#FBE3E5;color:#8E0E18}
+.trail{display:flex;align-items:center;gap:0}
+.pm{width:34px;height:34px;border:1.5px solid #5A4FA0;border-radius:50%;display:grid;place-items:center;font:500 7.5px 'Martian Mono';color:#5A4FA0;text-align:center;line-height:1.1;transform:rotate(-8deg)}
+.dash{width:14px;border-top:1.5px dashed #5A4FA0;opacity:.6}
+.pm.now{background:#5A4FA0;color:#fff}
+tr.cx td{color:#8a8f99}
+tr.cx .np b{text-decoration:line-through}
+.void{font:700 10px 'Martian Mono';color:#B3121F;border:1.5px solid #B3121F;padding:2px 5px;transform:rotate(-6deg);display:inline-block;margin-left:6px}
+</style></head><body>
+<aside class="rail">
+<div class="brand">Hire the Fire<small>RECRUITER · KESTREL LABS</small></div>
+<nav><a>Dashboard</a><a class="on">Pipeline</a><a>Jobs</a><a>Company</a></nav>
+<div class="jobs"><h4>OPEN JOBS · 4</h4>
+<div class="job on"><b>Frontend Engineer (React)</b><span>BENGALURU · 42 APPLICANTS</span></div>
+<div class="job"><b>Backend Engineer (Node)</b><span>PUNE · 31 APPLICANTS</span></div>
+<div class="job"><b>Data Analyst Intern</b><span>REMOTE · 57 APPLICANTS</span></div>
+<div class="job"><b>QA Engineer</b><span>MUMBAI · 12 APPLICANTS</span></div></div>
+</aside>
+<main>
+<div class="top"><div><div class="id">JOB HTF-0042 · OPEN SINCE 14 OCT</div><h1>Frontend Engineer (React)</h1><p>Full-time · Bengaluru · ₹12–18 LPA · 2–4 yrs</p></div><button class="btn">Edit job</button></div>
+<div class="tabs">
+<div class="tab on">Applied<strong>18</strong><i style="width:43%"></i></div>
+<div class="tab">Shortlisted<strong>11</strong><i style="width:26%"></i></div>
+<div class="tab">Interview<strong>7</strong><i style="width:17%"></i></div>
+<div class="tab">Hired<strong>2</strong><i style="width:5%"></i></div>
+<div class="tab">Rejected<strong>4</strong><i style="width:10%"></i></div>
+<div class="tab">All<strong>42</strong><i style="width:100%"></i></div></div>
+<div class="filters"><input value="Search applicants or skills"><select><option>Last moved: newest</option></select><select><option>Skill match: any</option></select></div>
+<table><thead><tr><th>APPLICANT</th><th>SKILL MATCH</th><th>APPLIED</th><th>STATUS</th><th>TRAIL</th></tr></thead><tbody>
+<tr><td class="np"><b>Ananya Rao</b><span>React dev · 3 yrs · Bengaluru</span></td><td class="match">5/6</td><td>02 Nov</td><td><span class="st iv">Interview</span></td><td><div class="trail"><div class="pm">APPL<br>28 OCT</div><div class="dash"></div><div class="pm">SHRT<br>30 OCT</div><div class="dash"></div><div class="pm now">INTV<br>02 NOV</div></div></td></tr>
+<tr><td class="np"><b>Rohit Menon</b><span>Frontend · 4 yrs · Kochi</span></td><td class="match">4/6</td><td>01 Nov</td><td><span class="st sh">Shortlisted</span></td><td><div class="trail"><div class="pm">APPL<br>29 OCT</div><div class="dash"></div><div class="pm now">SHRT<br>01 NOV</div></div></td></tr>
+<tr><td class="np"><b>Farah Qureshi</b><span>UI engineer · 2 yrs · Hyderabad</span></td><td class="match">6/6</td><td>01 Nov</td><td><span class="st hi">Hired</span></td><td><div class="trail"><div class="pm">APPL<br>16 OCT</div><div class="dash"></div><div class="pm">SHRT<br>18 OCT</div><div class="dash"></div><div class="pm">INTV<br>24 OCT</div><div class="dash"></div><div class="pm now">HIRD<br>01 NOV</div></div></td></tr>
+<tr class="cx"><td class="np"><b>Vikram Iyer</b><span>Angular dev · 5 yrs · Chennai</span></td><td class="match">2/6</td><td>31 Oct</td><td><span class="st rj">Rejected</span><span class="void">CANCELLED</span></td><td><div class="trail"><div class="pm">APPL<br>27 OCT</div><div class="dash"></div><div class="pm now">RJCT<br>31 OCT</div></div></td></tr>
+<tr><td class="np"><b>Sneha Kulkarni</b><span>React + TS · 2 yrs · Pune</span></td><td class="match">4/6</td><td>03 Nov</td><td><span class="st">Applied</span></td><td><div class="trail"><div class="pm now">APPL<br>03 NOV</div></div></td></tr>
+<tr><td class="np"><b>Arjun Das</b><span>Full-stack · 3 yrs · Kolkata</span></td><td class="match">3/6</td><td>03 Nov</td><td><span class="st">Applied</span></td><td><div class="trail"><div class="pm now">APPL<br>03 NOV</div></div></td></tr>
+</tbody></table>
+</main></body></html>

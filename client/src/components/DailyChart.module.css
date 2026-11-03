@@ -1,0 +1,115 @@
+.figure {
+  margin: 0;
+  padding: var(--s-3) var(--s-5) var(--s-4);
+}
+
+.plot {
+  position: relative;
+}
+
+.plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grid {
+  stroke: var(--line-2);
+  stroke-width: 1;
+}
+
+.base {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.tick {
+  fill: var(--ink-3);
+  font-family: var(--font-data);
+  font-size: 10px;
+}
+
+.label {
+  fill: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hit {
+  fill: transparent;
+}
+
+.day {
+  outline: none;
+  cursor: default;
+}
+
+.day:focus-visible .hit {
+  fill: var(--line-2);
+}
+
+.bar {
+  fill: var(--violet-700);
+  transition: fill 100ms var(--ease-out);
+}
+
+.barOn {
+  fill: var(--violet-800);
+}
+
+.tip {
+  position: absolute;
+  top: -6px;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  background: var(--ink);
+  color: #fff;
+  font-size: var(--t-xs);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(26, 29, 36, 0.18);
+}
+
+.tip strong {
+  font-size: var(--t-sm);
+}
+
+.tip span {
+  color: #c8ccd4;
+}
+
+.table {
+  margin-top: var(--s-2);
+  font-size: var(--t-sm);
+}
+
+.table summary {
+  cursor: pointer;
+  color: var(--ink-3);
+  font-weight: 600;
+  width: max-content;
+}
+
+.table table {
+  margin-top: var(--s-2);
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 360px;
+}
+
+.table th,
+.table td {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--line-2);
+  text-align: left;
+}
+
+.table td:last-child,
+.table th:last-child {
+  text-align: right;
+}

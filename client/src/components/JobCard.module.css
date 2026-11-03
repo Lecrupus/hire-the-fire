@@ -1,0 +1,171 @@
+.card {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: var(--s-4);
+  padding: var(--s-4) var(--s-5);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line-2);
+  transition: background-color 120ms var(--ease-out);
+}
+
+.card:hover {
+  background: var(--surface-2);
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--yellow-100);
+  color: var(--yellow-900);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+.body {
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--t-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.title a:hover {
+  text-decoration: underline;
+}
+
+/* Whole card is the click target for pointer users; the link stays the accessible name. */
+.title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.card {
+  position: relative;
+}
+
+.side a,
+.side button {
+  position: relative;
+  z-index: 1;
+}
+
+.company {
+  color: var(--ink-2);
+  font-size: var(--t-sm);
+  margin-top: 2px;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  list-style: none;
+  margin: var(--s-2) 0 0;
+  padding: 0;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+}
+
+.facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.salary {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: var(--s-3) 0 0;
+  padding: 0;
+}
+
+.skills li {
+  padding: 1px 7px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-size: var(--t-xs);
+  color: var(--ink-2);
+}
+
+.skills li.have {
+  border-color: var(--yellow-500);
+  background: var(--yellow-100);
+  color: var(--yellow-900);
+  font-weight: 600;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--s-2);
+  text-align: right;
+}
+
+.posted {
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+}
+
+.match {
+  font-size: var(--t-xs);
+  font-weight: 600;
+  color: var(--yellow-900);
+  background: var(--yellow-100);
+  padding: 2px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.closed {
+  font-size: var(--t-xs);
+  font-weight: 700;
+  color: var(--red-800);
+}
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    padding: var(--s-4);
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .side {
+    grid-column: 2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

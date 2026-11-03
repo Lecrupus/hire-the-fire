@@ -1,0 +1,100 @@
+.wrap {
+  display: grid;
+  place-items: start center;
+  padding-top: clamp(0px, 5vh, 64px);
+}
+
+.card {
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding: var(--s-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+}
+
+.lede {
+  margin-top: -8px;
+  color: var(--ink-3);
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.roles legend {
+  margin-bottom: 6px;
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.role {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--s-3);
+  border: 1px solid #c9cdd4;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+
+.role:hover {
+  border-color: var(--ink-3);
+}
+
+.role input {
+  position: absolute;
+  opacity: 0;
+}
+
+.role:focus-within {
+  box-shadow: var(--focus);
+}
+
+.roleOn {
+  border-color: var(--red-700);
+  box-shadow: inset 0 0 0 1px var(--red-700);
+  background: #fff8f8;
+}
+
+.roleTitle {
+  font-weight: 700;
+}
+
+.roleSub {
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+}
+
+.switch {
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  text-align: center;
+}
+
+.demo {
+  padding: var(--s-3);
+  border-radius: var(--r-sm);
+  background: var(--yellow-100);
+  color: var(--yellow-900);
+  font-size: var(--t-xs);
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--s-5) var(--s-4);
+  }
+
+  .roles {
+    grid-template-columns: 1fr;
+  }
+}

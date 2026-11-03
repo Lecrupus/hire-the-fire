@@ -1,0 +1,230 @@
+.jobId {
+  font-family: var(--font-data);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--red-700);
+}
+
+.toolbar {
+  display: flex;
+  gap: var(--s-3);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search {
+  flex: 0 1 340px;
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 0 var(--s-3);
+  background: var(--surface);
+  border: 1px solid #c9cdd4;
+  border-radius: var(--r-sm);
+  color: var(--ink-3);
+}
+
+.search:focus-within {
+  border-color: var(--ink);
+  box-shadow: var(--focus);
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.search input:focus-visible {
+  box-shadow: none;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+}
+
+.sort select {
+  height: 36px;
+  padding: 0 var(--s-2);
+  border: 1px solid #c9cdd4;
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.table td {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.toggleCell {
+  width: 36px;
+  padding-right: 0 !important;
+}
+
+.toggle {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: none;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background: var(--line-2);
+  color: var(--ink);
+}
+
+.name {
+  display: block;
+  font-weight: 650;
+  font-size: var(--t-md);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.match {
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--ink);
+}
+
+.moves {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+/* Nothing disappears, it cancels: the row stays, struck through. */
+.cancelled .name {
+  color: var(--ink-3);
+  text-decoration: line-through;
+  text-decoration-color: rgba(179, 18, 31, 0.6);
+}
+
+.cancelled td {
+  color: var(--ink-3);
+}
+
+.detailRow td {
+  background: var(--surface-2);
+  padding: 0 !important;
+}
+
+.detailRow:hover td {
+  background: var(--surface-2) !important;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-5);
+  padding: var(--s-4) var(--s-5) var(--s-5) 50px;
+}
+
+.detailCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.detailCol p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detailHead {
+  margin-top: var(--s-2);
+  font-family: var(--font-data);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.detailHead:first-child {
+  margin-top: 0;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skillList li {
+  padding: 1px 7px;
+  border-radius: 3px;
+  font-size: var(--t-xs);
+  font-weight: 600;
+}
+
+.have {
+  background: var(--yellow-100);
+  color: var(--yellow-900);
+}
+
+.missing {
+  border: 1px dashed #b5bac3;
+  color: var(--ink-3);
+}
+
+.note {
+  white-space: pre-line;
+  max-width: 60ch;
+}
+
+.history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notes {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #c9cdd4;
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  resize: vertical;
+}
+
+.notes:focus-visible {
+  border-color: var(--ink);
+}
+
+.noteActions {
+  display: flex;
+  gap: var(--s-3);
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .details {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: var(--s-5);
+  }
+}
