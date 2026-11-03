@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.local
+*.log
+server/uploads/
+graphify-out/
+vendor/
+.impeccable/live/
+.impeccable/review/
+.DS_Store
+server/.local-db/
