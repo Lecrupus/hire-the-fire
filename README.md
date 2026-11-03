@@ -63,7 +63,7 @@ The client reads `VITE_API_URL` (the API origin) in production; in development V
 ## Deploy
 
 The API runs on Render, the client on Vercel and the data on MongoDB Atlas, all on free tiers.
-Vercel forwards `/api` and `/uploads` to Render (see `client/vercel.json`), so the browser only ever
+Vercel forwards `/api` and `/uploads` to Render (see `vercel.json`), so the browser only ever
 talks to one site and the refresh cookie stays first-party.
 
 1. **Atlas:** create a free M0 cluster and a database user, allow access from anywhere
@@ -71,8 +71,8 @@ talks to one site and the refresh cookie stays first-party.
 2. **Render:** New > Blueprint > this repo. `render.yaml` defines the service and generates the JWT
    secrets. Fill in `MONGODB_URI`, set `CLIENT_URL` to the Vercel URL, and add the Cloudinary keys
    (without them, uploads are lost on every redeploy). If the service URL is not
-   `hire-the-fire-api.onrender.com`, update the two rewrites in `client/vercel.json`.
-3. **Vercel:** import the repo with root directory `client`. No environment variables are needed.
+   `hire-the-fire-api.onrender.com`, update the two rewrites in `vercel.json`.
+3. **Vercel:** import the repo and keep the root directory as is; `vercel.json` sets the build. No environment variables are needed.
 4. **Seed the demo data** once, from your machine:
    `MONGODB_URI="<atlas uri>" npm run seed`
 5. Set the repository variable `API_URL` (the Vercel URL) so CI's smoke test calls `/api/v1/health`
