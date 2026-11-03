@@ -1,0 +1,138 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  padding: var(--s-6) 0 var(--s-4);
+}
+
+.headline {
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  max-width: 16ch;
+}
+
+.lede {
+  max-width: 58ch;
+  font-size: var(--t-lg);
+  color: var(--ink-2);
+}
+
+.search {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto;
+  gap: var(--s-2);
+  max-width: 880px;
+  margin-top: var(--s-2);
+  padding: var(--s-2);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+}
+
+.searchField {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 0 var(--s-3);
+  border-radius: var(--r-sm);
+  color: var(--ink-3);
+}
+
+.searchField:focus-within {
+  box-shadow: var(--focus);
+}
+
+.searchField + .searchField {
+  border-left: 1px solid var(--line);
+}
+
+.searchField input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: var(--t-md);
+  color: var(--ink);
+}
+
+.searchField input::placeholder {
+  color: #6b717c;
+}
+
+.search button {
+  min-height: 44px;
+}
+
+.recruiterLine {
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: var(--s-5);
+  align-items: start;
+}
+
+.skills {
+  position: sticky;
+  top: var(--s-5);
+}
+
+.skillList {
+  list-style: none;
+  margin: 0;
+  padding: var(--s-2) 0;
+}
+
+.skillList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px var(--s-5);
+  font-size: var(--t-sm);
+}
+
+.skillList a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skillList a:hover {
+  text-decoration: underline;
+}
+
+.skillList :global(.data) {
+  color: var(--ink-3);
+}
+
+@media (max-width: 1000px) {
+  .columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skills {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: var(--s-2);
+  }
+
+  .search {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .searchField + .searchField {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}

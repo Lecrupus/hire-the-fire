@@ -1,0 +1,160 @@
+{
+  "title": "Choose the visual world for Hire the Fire",
+  "question": "The roll assigned Speed Post Tracking. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Speed Post Tracking",
+      "kicker": "THE ROLL",
+      "lineage": "India Post Speed Post slips and consignment tracking",
+      "thesis": "Every application is a consignment: booked, moved, stamped, delivered.",
+      "palette": ["#B3121F", "#F5B700", "#1A1D24", "#5A4FA0", "#F5F6F8"],
+      "materials": ["consignment slip", "dated circular postmark", "dot-matrix tracking ID"],
+      "viewport": "Postal-red rail with the recruiter jobs; stage tabs with counts; applicant table whose last column is a trail of dated postmarks.",
+      "risk": "Turns twee if the postmark is used as ornament instead of only on real status moves.",
+      "raised": [
+        {
+          "from": "challenger-ticket-wallet",
+          "raise": "Nothing disappears, it cancels: rejected and withdrawn applications stay in the trail, struck through."
+        },
+        {
+          "from": "challenger-split-flap",
+          "raise": "Columns never move; rows reorder by when they last moved."
+        },
+        {
+          "from": "challenger-character-catalog",
+          "raise": "Every applicant carries a fixed nameplate: name, headline, skill match."
+        },
+        {
+          "from": "challenger-acetate-manual",
+          "raise": "Each stage tab carries a bar sized by its share of applicants."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Reservation Chart",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Indian Railways reservation charts pasted on coach doors",
+      "thesis": "The pipeline read like a coach chart: every name with its status code, WL to CNF.",
+      "palette": ["#FFFFFF", "#1D3E8A", "#B22222", "#1A1A1A", "#E9EEF7"],
+      "materials": ["printed passenger chart", "status codes", "coach numbering"],
+      "viewport": "Railway-blue header; a dense chart table, each applicant with a short status code; counts per code above.",
+      "risk": "Status codes add a decoding step for anyone who never booked a train.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-dense",
+      "kind": "challenger",
+      "catalogId": "japanese-high-density-web",
+      "label": "High-Density Modules",
+      "verdict": "competitive",
+      "lineage": "Japanese contemporary high-density portals",
+      "thesis": "Every number the recruiter needs, packed into ruled modules on one screen.",
+      "palette": ["#FFFFFF", "#111111", "#E60012", "#D9DCE0", "#F3F4F6"],
+      "materials": ["hairline module grid", "red header tabs", "small gothic sans"],
+      "viewport": "A mosaic of ruled modules: jobs, stage counts, new applicants, interviews today, each with a red tab.",
+      "case": "Holds product clarity for daily triage; loses audience identification to the postal world.",
+      "risk": "Tiny type tires recruiters over a full day and fails at 360 px for seekers.",
+      "html": ".impeccable/mocks/decision/challenger-dense.html",
+      "hero": "https://impeccable.style/worlds/cards/japanese-high-density-web-hero.webp"
+    },
+    {
+      "id": "challenger-transit",
+      "kind": "challenger",
+      "catalogId": "wayfinding-cartography-signage-midnight-transit-diagram",
+      "label": "Transit Line",
+      "verdict": "competitive",
+      "lineage": "metro line diagrams in enamel",
+      "thesis": "Each job is a line; each stage a station; applicants ride toward Hired.",
+      "palette": ["#0E1A3A", "#E8EEF5", "#E2382B", "#2F6FE4", "#F2A900", "#2EA05A"],
+      "materials": ["enamel line diagram", "interchange circles", "transit sans"],
+      "viewport": "Midnight rail with jobs as coloured lines; the pipeline drawn as stations with head counts.",
+      "case": "Pipeline-as-line reads instantly; the dark enamel ground loses audience identification for daytime desk work.",
+      "risk": "A dark ground all day under office light, and line colours compete with status colours.",
+      "html": ".impeccable/mocks/decision/challenger-transit.html",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram-hero.webp"
+    },
+    {
+      "id": "challenger-ticket-wallet",
+      "kind": "challenger",
+      "catalogId": "vernacular-ephemera-jet-age-ticket-wallet",
+      "label": "Ticket Wallet",
+      "verdict": "declined",
+      "lineage": "jet-age airline ticket wallets",
+      "thesis": "Each application as a coupon that tears off stage by stage.",
+      "palette": ["#1B2A52", "#C8102E", "#FFFFFF", "#5B3F8C"],
+      "materials": ["carbon coupons", "VOID stamp"],
+      "viewport": "Coupon stack per applicant.",
+      "case": "Overlaps the postal world and reads as travel, not hiring.",
+      "kept": "Nothing disappears, it cancels.",
+      "risk": "Coupon chrome crowds a working table.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-jet-age-ticket-wallet-hero.webp"
+    },
+    {
+      "id": "challenger-split-flap",
+      "kind": "challenger",
+      "catalogId": "signals-instruments-split-flap-concourse",
+      "label": "Split-Flap Board",
+      "verdict": "declined",
+      "lineage": "rail concourse departure boards",
+      "thesis": "Applicants as departures flipping between stages.",
+      "palette": ["#111111", "#FFFFFF", "#F2A900", "#B3261E"],
+      "materials": ["flap cells", "steel frame"],
+      "viewport": "A departures board of applicants.",
+      "case": "A costume of an instrument; flips slow down scanning.",
+      "kept": "Columns never move; only rows change.",
+      "risk": "Novelty wears off by day two.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse-hero.webp"
+    },
+    {
+      "id": "challenger-character-catalog",
+      "kind": "challenger",
+      "catalogId": "pop-culture-shelf-character-goods-catalog",
+      "label": "Character Catalog",
+      "verdict": "declined",
+      "lineage": "character goods catalogs",
+      "thesis": "Applicants as a ranked roster of cards.",
+      "palette": ["#FCE4EC", "#E3F2FD", "#FFF8E1", "#FFFFFF"],
+      "materials": ["pastel cells", "name plates"],
+      "viewport": "Pastel roster grid.",
+      "case": "Trivializes candidates; loses both axes.",
+      "kept": "A fixed nameplate on every entity.",
+      "risk": "Feels unserious for hiring decisions.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-character-goods-catalog-hero.webp"
+    },
+    {
+      "id": "challenger-acetate-manual",
+      "kind": "challenger",
+      "catalogId": "rw-manual-acetate-tab-board",
+      "label": "Acetate Manual",
+      "verdict": "declined",
+      "lineage": "boxed-software reference manuals",
+      "thesis": "Sections as coloured divider boards under acetate leaves.",
+      "palette": ["#E8641E", "#F2C21B", "#2E9E5B", "#2F4FB5"],
+      "materials": ["acetate leaves", "stepped tab rail"],
+      "viewport": "Stepped tab rail down the edge.",
+      "case": "A reading world, not a triage one.",
+      "kept": "Tabs sized by their share of the whole.",
+      "risk": "Layered leaves fight dense tables.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "The category standard",
+    "thesis": "A modern applicant-tracking dashboard, executed impeccably.",
+    "palette": ["#FFFFFF", "#111827", "#4F46E5", "#F3F4F6"],
+    "materials": ["clean grid", "KPI cards", "kanban columns"],
+    "viewport": "Left nav, KPI row, kanban pipeline: the arrangement recruiters expect.",
+    "risk": "Indistinguishable from every other ATS by design.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

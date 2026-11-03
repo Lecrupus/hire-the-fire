@@ -1,0 +1,180 @@
+/* Shared page layouts. Page-specific rules live next to each page. */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  max-width: 1240px;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+}
+
+.panelPad {
+  padding: var(--s-5);
+}
+
+.panelHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.panelHead h2 {
+  font-size: var(--t-md);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+.panelHead a {
+  font-size: var(--t-sm);
+}
+
+.list {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.list > :last-child {
+  border-bottom: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-4);
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-4);
+}
+
+.formActions {
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: var(--s-2);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  min-height: 40px;
+}
+
+.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--red-700);
+}
+
+.sectionTitle {
+  font-size: var(--t-md);
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--ink-3);
+  font-size: var(--t-sm);
+}
+
+/* Data tables: hairline rules, mono column labels, sticky header. */
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-sm);
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  font-family: var(--font-data);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-2);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tbody tr:hover td {
+  background: var(--surface-2);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sub {
+  display: block;
+  color: var(--ink-3);
+  font-size: var(--t-xs);
+  margin-top: 2px;
+}
+
+@media (max-width: 720px) {
+  .row2,
+  .row3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .panelPad {
+    padding: var(--s-4);
+  }
+
+  .panelHead {
+    padding: var(--s-3) var(--s-4);
+  }
+}

@@ -1,0 +1,279 @@
+.frame {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: var(--rail-w) minmax(0, 1fr);
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  z-index: 50;
+  padding: 8px 12px;
+  background: var(--yellow-500);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.skip:focus {
+  left: 8px;
+}
+
+.topbar {
+  display: none;
+}
+
+.rail {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  padding: var(--s-5) var(--s-4);
+  background: var(--red-700);
+  color: #fff;
+  scrollbar-color: var(--red-800) transparent;
+}
+
+.rail :focus-visible {
+  box-shadow:
+    0 0 0 2px var(--red-700),
+    0 0 0 4px var(--yellow-500);
+}
+
+.brand {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.railBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 var(--s-2);
+}
+
+.who {
+  font-family: var(--font-data);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--red-on);
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--r-sm);
+  color: var(--red-on);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background: rgba(0, 0, 0, 0.14);
+  color: #fff;
+  text-decoration: none;
+}
+
+.navLink.active {
+  background: var(--red-800);
+  color: #fff;
+  font-weight: 700;
+}
+
+.railHeading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--s-2) var(--s-2);
+  font-family: var(--font-data);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-on);
+}
+
+.railJobs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.railJob {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: var(--r-sm);
+  color: #fff;
+  text-decoration: none;
+}
+
+.railJob:hover {
+  background: rgba(0, 0, 0, 0.14);
+  text-decoration: none;
+}
+
+.railJob.current {
+  background: var(--yellow-500);
+  color: var(--ink);
+}
+
+.railJobTitle {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.railJobMeta {
+  font-family: var(--font-data);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--red-on);
+}
+
+.current .railJobMeta {
+  color: var(--yellow-900);
+}
+
+.railFoot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-2) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footName {
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  color: var(--red-on);
+  font-size: var(--t-sm);
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.main {
+  min-width: 0;
+  padding: var(--s-6) clamp(var(--s-4), 3vw, var(--s-7)) var(--s-7);
+  outline: none;
+}
+
+.scrim {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .frame {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 var(--s-4);
+    background: var(--red-700);
+  }
+
+  .menuBtn {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-right: -10px;
+    border: 0;
+    border-radius: var(--r-sm);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .menuBtn:focus-visible {
+    box-shadow: 0 0 0 2px var(--yellow-500);
+  }
+
+  .rail {
+    position: fixed;
+    z-index: 40;
+    top: 56px;
+    left: 0;
+    width: min(300px, 86vw);
+    height: calc(100dvh - 56px);
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition:
+      transform 220ms var(--ease-out),
+      visibility 0s linear 220ms;
+  }
+
+  .railOpen {
+    transform: none;
+    visibility: visible;
+    transition: transform 220ms var(--ease-out);
+  }
+
+  .railBrand {
+    display: none;
+  }
+
+  .scrim {
+    display: block;
+    position: fixed;
+    inset: 56px 0 0;
+    z-index: 35;
+    border: 0;
+    background: rgba(26, 29, 36, 0.45);
+  }
+
+  .main {
+    padding: var(--s-5) var(--s-4) var(--s-7);
+  }
+}

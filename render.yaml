@@ -1,0 +1,36 @@
+# Render Blueprint for the API. In Render: New > Blueprint > pick this repo.
+# You will be asked for the values marked sync: false.
+services:
+  - type: web
+    name: hire-the-fire-api
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    # --ignore-scripts skips Husky and the test-only MongoDB binary download.
+    buildCommand: npm ci --omit=dev --ignore-scripts -w server
+    startCommand: npm start -w server
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20
+      # Requests arrive through Vercel's proxy and then Render's, so the client IP is two hops back.
+      - key: TRUST_PROXY
+        value: 2
+      - key: JWT_ACCESS_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false

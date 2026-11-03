@@ -1,0 +1,186 @@
+@import '@fontsource-variable/archivo';
+@import '@fontsource/martian-mono/400.css';
+@import '@fontsource/martian-mono/500.css';
+
+:root {
+  /* Postal world: red owns navigation, yellow marks the current thing, violet is only for status history. */
+  --red-900: #6f0a13;
+  --red-800: #8e0e18;
+  --red-700: #b3121f;
+  --red-100: #fbe3e5;
+  --red-on: #ffe3e5; /* secondary text on the red rail, 5.6:1 */
+
+  --yellow-500: #f5b700;
+  --yellow-200: #ffe58a;
+  --yellow-100: #fff1c7;
+  --yellow-900: #5c4300;
+
+  --violet-700: #5a4fa0;
+  --violet-800: #3f3580;
+  --violet-100: #e7e4f6;
+
+  --green-800: #1d6b3a;
+  --green-100: #ddf1e3;
+
+  --ink: #1a1d24;
+  --ink-2: #3d434f;
+  --ink-3: #5b6270;
+  --ground: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #fafafb;
+  --line: #dde0e5;
+  --line-2: #eef0f3;
+
+  --font-ui: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-data: 'Martian Mono', ui-monospace, 'Cascadia Mono', monospace;
+
+  --r-sm: 4px;
+  --r-md: 6px;
+  --rail-w: 248px;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+
+  --t-xs: 0.75rem;
+  --t-sm: 0.8125rem;
+  --t-md: 0.9375rem;
+  --t-lg: 1.125rem;
+  --t-xl: 1.5rem;
+  --t-2xl: 2rem;
+
+  --focus: 0 0 0 2px var(--surface), 0 0 0 4px var(--ink);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--t-md);
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--ground);
+  caret-color: var(--red-700);
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.2;
+  text-wrap: balance;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: var(--t-2xl);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: var(--t-xl);
+  font-weight: 750;
+}
+
+h3 {
+  font-size: var(--t-lg);
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--red-800);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+::selection {
+  background: var(--yellow-200);
+  color: var(--ink);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c3c7cf transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c3c7cf;
+  border-radius: 10px;
+  border: 3px solid var(--ground);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.data {
+  font-family: var(--font-data);
+  font-size: 0.75em;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

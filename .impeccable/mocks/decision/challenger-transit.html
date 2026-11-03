@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1440px;height:900px;overflow:hidden;font-family:'Hanken Grotesk',sans-serif;background:#E8EEF5;color:#0E1A3A;display:grid;grid-template-columns:260px 1fr}
+.rail{background:#0E1A3A;color:#E8EEF5;padding:22px 18px}
+.rail b{font-size:20px;font-weight:800}
+.line{display:flex;align-items:center;gap:10px;padding:10px 6px;font-size:14px;margin-top:6px}
+.line i{width:26px;height:6px;border-radius:3px}
+.line.on{background:#1B2A55;border-radius:4px}
+nav{margin:24px 0}
+nav a{display:block;padding:8px 6px;color:#E8EEF5;opacity:.8;font-size:14px}
+main{padding:26px 34px}
+h1{font-size:28px;font-weight:800}
+p.sub{color:#4b5878;margin-top:4px}
+.map{position:relative;background:#fff;border-radius:8px;margin-top:22px;height:190px;padding:0 60px}
+.track{position:absolute;left:80px;right:80px;top:84px;height:10px;background:#E2382B;border-radius:5px}
+.stn{position:absolute;top:70px;width:38px;height:38px;border-radius:50%;background:#fff;border:6px solid #E2382B;display:grid;place-items:center;font-weight:800;font-size:13px}
+.lab{position:absolute;top:122px;width:120px;margin-left:-41px;text-align:center;font-weight:600;font-size:13px}
+.lab span{display:block;font-weight:400;color:#4b5878;font-size:12px}
+.branch{position:absolute;top:89px;height:6px;background:#8892A8;border-radius:3px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;margin-top:20px;font-size:13px}
+th{text-align:left;padding:10px 16px;color:#4b5878;font-weight:600;font-size:12px;border-bottom:1px solid #D6DDE8}
+td{padding:11px 16px;border-bottom:1px solid #EDF1F6}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+</style></head><body>
+<aside class="rail"><b>Hire the Fire</b>
+<nav><a>Dashboard</a><a style="opacity:1;font-weight:600">Pipeline</a><a>Jobs</a><a>Company</a></nav>
+<div class="line on"><i style="background:#E2382B"></i>Frontend (React)</div>
+<div class="line"><i style="background:#2F6FE4"></i>Backend (Node)</div>
+<div class="line"><i style="background:#F2A900"></i>Data Analyst Intern</div>
+<div class="line"><i style="background:#2EA05A"></i>QA Engineer</div></aside>
+<main>
+<h1>Frontend Engineer (React)</h1><p class="sub">Red line · Bengaluru · 42 applicants · ₹12–18 LPA</p>
+<div class="map"><div class="track"></div>
+<div class="stn" style="left:80px">18</div><div class="lab" style="left:80px">Applied<span>18 riding</span></div>
+<div class="stn" style="left:360px">11</div><div class="lab" style="left:360px">Shortlisted<span>11 riding</span></div>
+<div class="stn" style="left:640px">7</div><div class="lab" style="left:640px">Interview<span>3 today</span></div>
+<div class="stn" style="left:920px">2</div><div class="lab" style="left:920px">Hired<span>terminus</span></div>
+<div class="branch" style="left:420px;width:120px;transform:rotate(30deg);transform-origin:left"></div>
+</div>
+<table><thead><tr><th>APPLICANT</th><th>STATION</th><th>MATCH</th><th>BOARDED</th><th>LAST MOVE</th></tr></thead><tbody>
+<tr><td>Ananya Rao</td><td><span class="dot" style="background:#E2382B"></span>Interview</td><td>5/6</td><td>28 Oct</td><td>02 Nov</td></tr>
+<tr><td>Rohit Menon</td><td><span class="dot" style="background:#E2382B"></span>Shortlisted</td><td>4/6</td><td>29 Oct</td><td>01 Nov</td></tr>
+<tr><td>Farah Qureshi</td><td><span class="dot" style="background:#2EA05A"></span>Hired</td><td>6/6</td><td>16 Oct</td><td>01 Nov</td></tr>
+<tr><td>Vikram Iyer</td><td><span class="dot" style="background:#8892A8"></span>Left the line</td><td>2/6</td><td>27 Oct</td><td>31 Oct</td></tr>
+<tr><td>Sneha Kulkarni</td><td><span class="dot" style="background:#E2382B"></span>Applied</td><td>4/6</td><td>03 Nov</td><td>03 Nov</td></tr>
+</tbody></table></main></body></html>

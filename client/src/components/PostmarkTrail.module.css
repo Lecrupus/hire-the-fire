@@ -1,0 +1,102 @@
+.trail {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 4px 2px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  width: 12px;
+  border-top: 1.5px dashed var(--violet-700);
+  opacity: 0.55;
+}
+
+/* A round cancellation postmark: double ring, code over date. */
+.mark {
+  --c: var(--violet-700);
+  position: relative;
+  display: grid;
+  place-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--c);
+  border-radius: 50%;
+  color: var(--c);
+  font-family: var(--font-data);
+  text-align: center;
+  line-height: 1.05;
+  transform: rotate(-9deg);
+}
+
+.mark::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 0.75px solid var(--c);
+  border-radius: 50%;
+  opacity: 0.55;
+}
+
+.code {
+  font-size: 8.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.date {
+  font-size: 7px;
+  letter-spacing: 0.02em;
+}
+
+.now {
+  background: var(--c);
+  color: #fff;
+}
+
+.now::after {
+  border-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.cancelled {
+  --c: var(--red-700);
+}
+
+/* The signature move: a two-frame stamp, only when a status actually changes. */
+.fresh {
+  animation: stamp 180ms steps(2, jump-none) both;
+}
+
+@keyframes stamp {
+  0% {
+    transform: rotate(-16deg) scale(1.45);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(-9deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.compact .mark {
+  width: 34px;
+  height: 34px;
+}
+
+.compact .code {
+  font-size: 7.5px;
+}
+
+.compact .date {
+  font-size: 6.5px;
+}
+
+.compact .link {
+  width: 8px;
+}

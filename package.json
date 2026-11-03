@@ -1,0 +1,28 @@
+{
+  "name": "hire-the-fire",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MERN job portal: seekers apply, recruiters run a hiring pipeline, admins moderate.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c red,yellow \"npm run dev -w server\" \"npm run dev -w client\"",
+    "lint": "npm run lint -w server && npm run lint -w client",
+    "test": "npm test -w server && npm test -w client",
+    "seed": "npm run seed -w server",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "prettier --write",
+    "*.{css,json,md}": "prettier --write"
+  }
+}
