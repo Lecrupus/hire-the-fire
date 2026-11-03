@@ -15,7 +15,8 @@ const routes = require('./routes');
 /** Builds the Express app. Kept separate from server.js so tests can import it without listening. */
 function createApp() {
   const app = express();
-  app.set('trust proxy', 1); // Render sits behind a proxy; needed for rate limiting by IP
+  // Proxy hops in front of the API (Render = 1, Vercel rewrite + Render = 2); rate limiting keys on the client IP.
+  app.set('trust proxy', env.trustProxy);
 
   app.use(requestId);
   app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
